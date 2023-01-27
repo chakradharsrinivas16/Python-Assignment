@@ -15,7 +15,7 @@ In order to build the BFS, we employed queues. Each time we removed an entry fro
 
 ## 2. Depth First Search
 Depth-first search is an algorithm for searching in data structures. The algorithm starts at the some arbitrary node and explores as far as possible along each branch before backtracking. 
-
+#### Implementation of DFS
 In order to determine which "O" entries are connected to it and therefore cannot be captured by "X" because one of its sides is occupied by "O," we traversed the board's borders and performed DFS to all of the "O" entries in the borders. We then marked all of these types of entries to "Y" and transformed them to "O," whereas other entries were made to "X" because they could be captured.
 
 ## Test run
