@@ -1,7 +1,7 @@
 def solve(board):
     # Dimensions for the board 
-    m=len(board)
-    n=len(board[0])
+    a=len(board)
+    b=len(board[0])
     # Defining a function for dfs
     def dfs(m,n):
         # Base condition if we exceeded the limit or traversed through X we do nothing
@@ -15,14 +15,14 @@ def solve(board):
         dfs(m-1,n) # Moving Up
         dfs(m,n-1) # Moving Left
     # Traversing every element in board and If we come across 'O' we move it to dfs and explore its neighbours.
-    for i in range(m):
-        for j in range(n):
+    for i in range(a):
+        for j in range(b):
             #If element is 'O; and is in borders of board we move it to dfs
-            if (board[i][j]=='O' and (i in [0,m-1] or j in [0,n-1])):
+            if (board[i][j]=='O' and (i in [0,a-1] or j in [0,b-1])):
                 dfs(i,j)
     # Traversing every element in board and If we come across Y we make it 'O' else we make it. X.
-    for i in range(m):
-        for j in range(n):
+    for i in range(a):
+        for j in range(b):
             if board[i][j]=='O':
                 board[i][j]='X'
             if board[i][j]=='Y':
