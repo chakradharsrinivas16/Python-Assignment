@@ -26,4 +26,4 @@ def solve(self, board):
             if board[i][j]=='O':
                 board[i][j]='X'
             if board[i][j]=='Y':
-                board[i][j]='O  
+                board[i][j]='O'  
