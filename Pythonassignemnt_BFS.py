@@ -1,4 +1,5 @@
-def solve(self, board):
+from collections import deque
+def solve(board):
     # Dimensions for the board 
     m, n = len(board), len(board[0])
     # Loading a queue
@@ -35,3 +36,16 @@ def solve(self, board):
                 board[i][j] = 'O'
             else:
                 board[i][j] = 'X'
+board = [["X","X","X","X"],["X","O","O","X"],["X","X","O","X"],["X","O","X","X"]]
+print("Solution using Breadth First Search")
+print("Board before captures - ")
+for r in board:
+   for c in r:
+      print(c,end = " ")
+   print()
+solve(board)
+print("Board after captures - ")
+for r in board:
+   for c in r:
+      print(c,end = " ")
+   print()
