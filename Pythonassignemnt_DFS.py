@@ -1,4 +1,4 @@
-def solve(self, board):
+def solve(board):
     # Dimensions for the board 
     m=len(board)
     n=len(board[0])
@@ -27,3 +27,16 @@ def solve(self, board):
                 board[i][j]='X'
             if board[i][j]=='Y':
                 board[i][j]='O'  
+board = [["X","X","X","X"],["X","O","O","X"],["X","X","O","X"],["X","O","X","X"]]
+print("Solution using Depth First Search")
+print("Board before captures - ")
+for r in board:
+   for c in r:
+      print(c,end = " ")
+   print()
+solve(board)
+print("Board after captures - ")
+for r in board:
+   for c in r:
+      print(c,end = " ")
+   print()
