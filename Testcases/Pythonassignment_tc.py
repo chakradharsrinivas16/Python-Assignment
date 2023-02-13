@@ -121,7 +121,7 @@ class Solution:  # Defining class
                     if self.board[g][h] not in (self.char_1, self.char_2):
                         raise Exception("Invalid Input")
         # Catching the exception if any occurs
-        except Exception as e:
+        except IndexError as e:
             print("An error occured",e)
-            raise Exception("Invalid Input")
+            raise Exception("Invalid Input, not in shape")
         return True
