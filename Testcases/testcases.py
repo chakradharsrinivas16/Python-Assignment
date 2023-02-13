@@ -91,7 +91,7 @@ def object_3():
     obj_3=Solution('X','O',3,3)
     return obj_3
 
-def test_single_elementO(object_3):    
+def test_all_elementsX(object_3):    
     # Test case 7: All elements are 'X's
     object_3.board = [["X","X","X"],["X","X","X"],["X","X","X"]]
     expected_output = [["X","X","X"],["X","X","X"],["X","X","X"]]
@@ -104,7 +104,7 @@ def test_single_elementO(object_3):
     else:
         print(f"Invalid entries, Please enter again.")
 
-def test_single_elementX(object_3):    
+def test_all_elementsO(object_3):    
     # Test case 8: All elements as 'O's
     object_3.board = [["O","O","O"],["O","O","O"],["O","O","O"]]
     expected_output = [["O","O","O"],["O","O","O"],["O","O","O"]]
@@ -128,3 +128,5 @@ def test_invalid_shape(object_3):
     board = [["X","X","O"],["X","X"],["X"]]
     with pytest.raises(Exception):
         object_3.validateInput()
+
+
