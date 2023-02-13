@@ -122,6 +122,6 @@ class Solution:  # Defining class
                         raise Exception("Invalid Input")
         # Catching the exception if any occurs
         except IndexError as e:
-            print("An error occured",e)
-            raise Exception("Invalid Input, not in shape")
-        return True
+            print("An error occured, board is not in shape, ",e)
+        except Exception as e:
+            print("An error",e)
